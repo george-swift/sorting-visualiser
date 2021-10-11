@@ -17,6 +17,12 @@ export const getTotalBars = (width) => {
   return 300;
 };
 
+export const changeBgColor = (vsxBars, details) => {
+  const [bar, color] = details;
+  const { style: barStyle } = vsxBars[bar];
+  barStyle.backgroundColor = color;
+};
+
 export const changeHeight = (vsxBars, comparison) => {
   const [k, newHeight] = comparison;
   const { style: barStyle } = vsxBars[k];
@@ -25,14 +31,39 @@ export const changeHeight = (vsxBars, comparison) => {
 
 export const animateIndex = (vsxBars, ...positions) => {
   positions.forEach((index) => {
-    const { style: barStyle } = vsxBars[index];
     setTimeout(() => {
-      barStyle.backgroundColor = SECONDARY_COLOR;
+      changeBgColor(vsxBars, [index, SECONDARY_COLOR]);
     }, ANIMATION_SPEED);
     setTimeout(() => {
-      barStyle.backgroundColor = PRIMARY_COLOR;
+      changeBgColor(vsxBars, [index, PRIMARY_COLOR]);
     }, ANIMATION_SPEED * 3);
   });
+};
+
+export const animateHeap = (vsxBars, ...heap) => {
+  const [
+    [left, right, leftHeight, rightHeight],
+    index,
+  ] = heap;
+
+  if (leftHeight >= 0) {
+    setTimeout(() => {
+      changeHeight(vsxBars, [left, rightHeight]);
+      changeBgColor(vsxBars, [left, PRIMARY_COLOR]);
+      changeHeight(vsxBars, [right, leftHeight]);
+      changeBgColor(vsxBars, [right, SECONDARY_COLOR]);
+    }, index * ANIMATION_SPEED);
+  }
+
+  setTimeout(() => {
+    changeBgColor(vsxBars, [left, PRIMARY_COLOR]);
+    changeBgColor(vsxBars, [right, SECONDARY_COLOR]);
+  }, index * ANIMATION_SPEED);
+
+  setTimeout(() => {
+    changeBgColor(vsxBars, [left, PRIMARY_COLOR]);
+    changeBgColor(vsxBars, [right, PRIMARY_COLOR]);
+  }, index * ANIMATION_SPEED + 3);
 };
 
 export const resetColors = (vsxBars) => {
@@ -40,4 +71,9 @@ export const resetColors = (vsxBars) => {
     const { style: vsxBarStyle } = vsxBars[i];
     vsxBarStyle.backgroundColor = PRIMARY_COLOR;
   }
+};
+
+export const swap = (array, i, j) => {
+  // eslint-disable-next-line no-param-reassign
+  [array[i], array[j]] = [array[j], array[i]];
 };
