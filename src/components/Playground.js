@@ -1,9 +1,12 @@
 import { useEffect, useState, useRef } from 'react';
+import insertionSortAnimation from '../algorithms/insertionSort';
 import mergeSortAnimation from '../algorithms/mergeSort';
 import quickSortAnimation from '../algorithms/quickSort';
+import heapSortAnimation from '../algorithms/heapSort';
 import {
   ANIMATION_SPEED, MAX_HEIGHT, MIN_HEIGHT, SORTED_COLOR,
-  getTotalBars, randomFromInterval, changeHeight, animateIndex, resetColors,
+  getTotalBars, randomFromInterval, changeHeight,
+  animateIndex, animateHeap, resetColors,
 } from '../utils';
 import useWindowDimensions from '../utils/customHook';
 import ButtonPanel from './ButtonPanel';
@@ -58,17 +61,27 @@ const Playground = () => {
 
   useEffect(() => generateNewList(), []);
 
+  const insertionSort = () => visualise(insertionSortAnimation(array));
+
   const mergeSort = () => visualise(mergeSortAnimation(array));
 
   const quickSort = () => visualise(quickSortAnimation(array));
+
+  const heapSort = () => {
+    const { animations, length } = heapSortAnimation(array);
+    animations.forEach((heap, index) => animateHeap(vsxBars, heap, index));
+    setTimeout(() => animateSortedList(), length * ANIMATION_SPEED);
+  };
 
   return (
     <section className="container-fluid playground">
       <Visualiser array={array} reference={containerRef} />
       <ButtonPanel
         randomize={generateNewList}
+        insertion={insertionSort}
         merge={mergeSort}
         quick={quickSort}
+        heap={heapSort}
         sorted={sorted}
       />
     </section>

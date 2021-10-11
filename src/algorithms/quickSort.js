@@ -1,8 +1,5 @@
 /* eslint-disable no-plusplus */
-/* eslint-disable no-param-reassign */
-const swap = (array, i, j) => {
-  [array[i], array[j]] = [array[j], array[i]];
-};
+import { swap } from '../utils';
 
 const partition = ({
   array, startIndex, endIndex, animations,

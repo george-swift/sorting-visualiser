@@ -2,15 +2,14 @@
 
 ![](./public/sorting-vsx.gif)
 ## Objectives
-- Implementing advanced sorting algorithms in JavaScript
+- Implementing sorting algorithms in JavaScript
 - Using hooks to manage state and lifecycle in React
 - Using CSS frameworks and pre-processors to create interfaces
 
 ## Live Link
 [Click here](https://react-sorting-visualiser.netlify.app/)
 ## Features
-> A basic visualiser for advanced sorting algorithms. It currently demonstrates the implementation of the Merge sort and Quick sort algorithms. Buttons in the playground are descriptively named. Click on `Generate new list` to create a random list of unsorted bars.
-Clicking on either of the sorting buttons shows how these algorithms work. 
+> A basic visualiser for sorting algorithms. It currently demonstrates the implementation of the following algorithms: Insertion Sort, Merge Sort, Quick Sort and Heap Sort. Buttons in the playground are descriptively named. Click on `Generate new list` to create a random list of unsorted bars. Clicking on either of the sorting buttons shows how these algorithms work. Hover on the sorting buttons to see a tooltip with the worst case of each algorithm.
 
 _Sorted_
 ![](./public/sorted.png)
@@ -41,7 +40,6 @@ _Mobile View_
 
 ## Acknowledgments
 - [React](https://reactjs.org/)
-- [Redux](https://redux.js.org/introduction/getting-started)
 - [Clément Mihailescu](https://www.youtube.com/watch?v=pFXYym4Wbkc)
 
 ## Show your support
