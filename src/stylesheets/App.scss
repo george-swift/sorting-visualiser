@@ -1,0 +1,75 @@
+$gray: #6c757d;
+$ash: rgb(108 117 125 / 50%);
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  letter-spacing: -1px;
+  margin-bottom: 0;
+}
+
+.github {
+  @extend .center;
+
+  margin-right: 1rem;
+  color: $gray;
+  text-decoration: none;
+}
+
+.vsx-btn {
+  padding: 0.125rem 0.25rem;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  border-color: $gray;
+  color: $gray;
+
+  &:hover,
+  &:active {
+    color: white;
+    background-color: $gray;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem $ash;
+  }
+}
+
+.playground {
+  @extend .center;
+
+  flex-direction: column;
+  min-height: calc(100vh - 50px);
+}
+
+.visualiser {
+  width: 100%;
+  height: calc(100% - 75px);
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+}
+
+.vsx-bar {
+  width: 2px;
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.button-panel {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 450px) {
+  .vsx-bar {
+    width: 3px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .vsx-bar {
+    width: 2px;
+  }
+}
