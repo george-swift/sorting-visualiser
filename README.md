@@ -40,7 +40,6 @@ _Mobile View_
 
 ## Acknowledgments
 - [React](https://reactjs.org/)
-- [Redux](https://redux.js.org/introduction/getting-started)
 - [Clément Mihailescu](https://www.youtube.com/watch?v=pFXYym4Wbkc)
 
 ## Show your support
