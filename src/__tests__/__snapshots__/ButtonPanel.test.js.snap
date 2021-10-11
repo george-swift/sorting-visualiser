@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot of the ButtonPanel component should render correctly 1`] = `
+<div
+  className="container button-panel"
+>
+  <button
+    className="btn vsx-btn"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    Generate New List
+  </button>
+  <button
+    className="btn vsx-btn"
+    disabled={false}
+    onClick={[Function]}
+    title="Worst case: O(N^2)"
+    type="button"
+  >
+    Insertion Sort
+  </button>
+  <button
+    className="btn vsx-btn"
+    disabled={false}
+    onClick={[Function]}
+    title="Worst case: O(NLogN)"
+    type="button"
+  >
+    Merge Sort
+  </button>
+  <button
+    className="btn vsx-btn"
+    disabled={false}
+    onClick={[Function]}
+    title="Worst case: O(N^2)"
+    type="button"
+  >
+    Quick Sort
+  </button>
+  <button
+    className="btn vsx-btn"
+    disabled={false}
+    onClick={[Function]}
+    title="Worst case: O(NLogN)"
+    type="button"
+  >
+    Heap Sort
+  </button>
+</div>
+`;
