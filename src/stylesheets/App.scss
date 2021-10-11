@@ -19,25 +19,6 @@ $ash: rgb(108 117 125 / 50%);
   text-decoration: none;
 }
 
-.vsx-btn {
-  padding: 0.125rem 0.25rem;
-  margin-right: 0.5rem;
-  font-size: 0.8rem;
-  border-radius: 0.2rem;
-  border-color: $gray;
-  color: $gray;
-
-  &:hover,
-  &:active {
-    color: white;
-    background-color: $gray;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 0.25rem $ash;
-  }
-}
-
 .playground {
   @extend .center;
 
@@ -59,7 +40,29 @@ $ash: rgb(108 117 125 / 50%);
 }
 
 .button-panel {
+  @extend .center;
+
+  justify-content: center;
   margin-bottom: 1.5rem;
+}
+
+.vsx-btn {
+  padding: 0.125rem 0.25rem;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  border-color: $gray;
+  color: $gray;
+
+  &:hover,
+  &:active {
+    color: white;
+    background-color: $gray;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem $ash;
+  }
 }
 
 @media screen and (max-width: 450px) {
