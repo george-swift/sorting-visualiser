@@ -5,6 +5,9 @@
 - Implementing advanced sorting algorithms in JavaScript
 - Using hooks to manage state and lifecycle in React
 - Using CSS frameworks and pre-processors to create interfaces
+
+## Live Link
+[Click here](https://react-sorting-visualiser.netlify.app/)
 ## Features
 > A basic visualiser for advanced sorting algorithms. It currently demonstrates the implementation of the Merge sort and Quick sort algorithms. Buttons in the playground are descriptively named. Click on `Generate new list` to create a random list of unsorted bars.
 Clicking on either of the sorting buttons shows how these algorithms work. 
