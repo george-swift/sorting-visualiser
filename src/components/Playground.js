@@ -56,7 +56,7 @@ const Playground = () => {
       list.push(randomFromInterval(MIN_HEIGHT, MAX_HEIGHT));
     }
     setArray(list);
-  }, [sorted]);
+  }, [sorted, totalBars, vsxBars]);
 
   useEffect(() => generateNewList(), []);
 
