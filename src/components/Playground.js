@@ -1,6 +1,4 @@
-import {
-  useCallback, useEffect, useState, useRef,
-} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import mergeSortAnimation from '../algorithms/mergeSort';
 import quickSortAnimation from '../algorithms/quickSort';
 import {
@@ -47,7 +45,7 @@ const Playground = () => {
     setTimeout(() => animateSortedList(), length * ANIMATION_SPEED);
   };
 
-  const generateNewList = useCallback(() => {
+  const generateNewList = () => {
     if (sorted) resetColors(vsxBars);
 
     setSorted(false);
@@ -56,7 +54,7 @@ const Playground = () => {
       list.push(randomFromInterval(MIN_HEIGHT, MAX_HEIGHT));
     }
     setArray(list);
-  }, [sorted, totalBars, vsxBars]);
+  };
 
   useEffect(() => generateNewList(), []);
 
