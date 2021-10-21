@@ -24,6 +24,7 @@ $ash: rgb(108 117 125 / 50%);
 
   flex-direction: column;
   min-height: calc(100vh - 50px);
+  background-color: rgb(33, 37, 41);
 }
 
 .visualiser {
@@ -52,7 +53,8 @@ $ash: rgb(108 117 125 / 50%);
   font-size: 0.8rem;
   border-radius: 0.2rem;
   border-color: $gray;
-  color: $gray;
+  background-color: white;
+  color: black;
 
   &:hover,
   &:active {

@@ -3,7 +3,7 @@ export const MAX_HEIGHT = 500;
 export const ANIMATION_SPEED = 1;
 export const PRIMARY_COLOR = 'turquoise';
 export const SECONDARY_COLOR = 'red';
-export const SORTED_COLOR = 'blue';
+export const SORTED_COLOR = 'goldenrod';
 
 export const randomFromInterval = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 

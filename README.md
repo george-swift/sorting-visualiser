@@ -14,9 +14,7 @@
 _Sorted_
 ![](./public/sorted.png)
 
-> The sorting visualiser is fully responsive and supports all screen sizes.
-
-_Mobile View_
+_Mobile_
 ![](./public/mobile.png)
 
 ## Built With
@@ -40,7 +38,7 @@ _Mobile View_
 
 ## Acknowledgments
 - [React](https://reactjs.org/)
-- [Clément Mihailescu](https://www.youtube.com/watch?v=pFXYym4Wbkc)
+- [Inspiration: Clément Mihailescu](https://www.youtube.com/watch?v=pFXYym4Wbkc)
 
 ## Show your support
 
