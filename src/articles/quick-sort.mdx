@@ -1,0 +1,47 @@
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism'
+
+<div className="flex flex-col gap-2">
+## Quick Sort
+
+Quick Sort is a divide-and-conquer sorting algorithm that works by selecting a _pivot_ element from
+the collection and _partitioning_ the other elements into two sub-collections according to whether
+they are less than or greater than the pivot. The sub-collections are then sorted recursively.
+
+The worst-case time complexity of Quick Sort is **O(n^2),** which occurs when the pivot selection consistently
+results in unbalanced partitions. However, on average, Quick Sort exhibits an **O(n log n)** time complexity,
+making it efficient for large datasets.
+
+Strategies like choosing a random pivot or partitioning in three ways, can be used to reduce the likelihood
+of worst-case scenarios. Here’s some pseudocode for Quick Sort:
+
+<SyntaxHighlighter language="javascript" style={solarizedlight}>
+  {`procedure quickSort(A: list, low: integer, high: integer)
+    if low < high then
+      // Partition the array, q is the index of the pivot
+      q = partition(A, low, high)
+
+      // Recursively sort the sub-lists
+      quickSort(A, low, q - 1)
+      quickSort(A, q + 1, high)
+
+    procedure partition(A: list, low: integer, high: integer): integer
+      // Choose the rightmost element as the pivot
+      pivot = A[high]
+
+      // Index of the smaller element
+      i = low - 1
+
+      for j from low to high - 1 do
+          if A[j] <= pivot then
+              i = i + 1
+              // Swap A[i] and A[j]
+              swap(A[i], A[j])
+
+      // Swap A[i + 1] and A[high] (put the pivot in its correct place)
+      swap(A[i + 1], A[high])
+
+      return i + 1`}
+
+</SyntaxHighlighter>
+</div>

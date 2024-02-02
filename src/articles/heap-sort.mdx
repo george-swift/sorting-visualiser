@@ -1,0 +1,55 @@
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism'
+
+<div className="flex flex-col gap-2">
+## Heap Sort
+Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure
+to build a _max-heap_ (for ascending order) or _min-heap_ (for descending order) and then
+sorts the collection.
+
+The worst-case time complexity of Heap Sort is **O(n log n),** making it efficient for
+large datasets. Heap Sort is an in-place sorting algorithm with the advantage of being
+not sensitive to the initial order of elements in the input array.
+
+Here’s some pseudocode for Heap Sort:
+
+<SyntaxHighlighter language="javascript" style={solarizedlight}>
+  {`procedure heapSort(A: list)
+    // Build a max-heap
+    buildMaxHeap(A)
+
+    // Extract elements from the heap one by one
+    for i from length(A) - 1 to 1 do
+        // Swap the root (maximum element) with the last element
+        swap(A[0], A[i])
+
+        // Reduce the heap size and heapify the root
+        heapify(A, 0, i)
+
+    procedure buildMaxHeap(A: list)
+      n = length(A)
+
+      // Start from the last non-leaf node and heapify all nodes
+      for i from n / 2 - 1 down to 0 do
+          heapify(A, i, n)
+
+    procedure heapify(A: list, i: integer, heapSize: integer)
+      largest = i
+      leftChild = 2 * i + 1
+      rightChild = 2 * i + 2
+
+      // Compare with left child
+      if leftChild < heapSize and A[leftChild] > A[largest] then
+          largest = leftChild
+
+      // Compare with right child
+      if rightChild < heapSize and A[rightChild] > A[largest] then
+          largest = rightChild
+
+      // If the largest element is not the root, swap and heapify the affected sub-tree
+      if largest != i then
+          swap(A[i], A[largest])
+          heapify(A, largest, heapSize)`}
+
+</SyntaxHighlighter>
+</div>

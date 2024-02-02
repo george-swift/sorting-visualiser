@@ -1,0 +1,30 @@
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism'
+
+<div className="flex flex-col gap-2">
+## Insertion Sort
+
+Insertion Sort is a simple sorting algorithm that builds the final sorted array one element at a time.
+It is much less efficient on large lists than more advanced algorithms such as quick sort, heap sort, or merge sort.
+
+However, it performs well for small datasets that are nearly sorted. The basic idea behind Insertion Sort is to iterate
+through the dataset, take one element at a time, and insert it into its correct position in the already sorted part
+of the dataset.
+
+The worst-case time complexity of Insertion Sort is **O(n^2)** when the dataset is in reverse order, and each element must
+be compared and shifted to the beginning of the sorted part. Here’s a simple pseudocode for Insertion Sort:
+
+<SyntaxHighlighter language="javascript" style={solarizedlight}>
+{`procedure insertionSort(A: list)
+    for i from 1 to length(A) - 1 do
+        currentElement = A[i]
+        j = i - 1
+
+        while j >= 0 and A[j] > currentElement do
+            A[j + 1] = A[j]
+            j = j - 1
+
+        A[j + 1] = currentElement`}
+
+</SyntaxHighlighter>
+</div>

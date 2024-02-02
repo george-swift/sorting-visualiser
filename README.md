@@ -1,27 +1,22 @@
 # Sorting Visualiser
 
-![](./public/sorting-vsx.gif)
+![](./public/before-sort.png)
 ## Objectives
-- Implementing sorting algorithms in JavaScript
-- Using hooks to manage state and lifecycle in React
-- Using CSS frameworks and pre-processors to create interfaces
+- Visually demonstrate sorting algorithms
+- Using libraries and CSS frameworks to create interactive interfaces
 
 ## Live Link
 [Click here](https://react-sorting-visualiser.netlify.app/)
 ## Features
-> A basic visualiser for sorting algorithms. It currently demonstrates the implementation of the following algorithms: Insertion Sort, Merge Sort, Quick Sort and Heap Sort. Buttons in the playground are descriptively named. Click on `Generate new list` to create a random list of unsorted bars. Clicking on either of the sorting buttons shows how these algorithms work. Hover on the sorting buttons to see a tooltip with the worst case of each algorithm.
+> A visualiser for sorting algorithms. It currently demonstrates the implementation of the following algorithms: Insertion Sort, Merge Sort, Quick Sort and Heap Sort.
 
 _Sorted_
-![](./public/sorted.png)
-
-_Mobile_
-![](./public/mobile.png)
+![](./public/after-sort.png)
 
 ## Built With
 - React
 - JavaScript
-- npm
-- SCSS
+- Tailwind CSS
 
 ## Getting Started
 - Clone this project by running `git clone git@github.com:george-swift/sorting-visualiser.git`
@@ -33,12 +28,8 @@ _Mobile_
 ## Authors
 
 👤 &nbsp; **Ubong George**
-- LinkedIn: [Ubong George](https://www.linkedin.com/in/ubong-itok)
+- LinkedIn: [Ubong George](https://www.linkedin.com/in/ubonggeorge/)
 - GitHub: [@george-swift](https://github.com/george-swift)
-
-## Acknowledgments
-- [React](https://reactjs.org/)
-- [Inspiration: Clément Mihailescu](https://www.youtube.com/watch?v=pFXYym4Wbkc)
 
 ## Show your support
 
